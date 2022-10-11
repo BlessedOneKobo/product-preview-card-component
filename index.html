@@ -36,7 +36,8 @@
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
+        gap: 1rem;
         background-color: var(--primary-cream);
         font-size: 14px;
       }
@@ -53,12 +54,15 @@
         background-color: var(--neutral-white);
         border-radius: var(--card-border-radius);
       }
-      .card img {
+      .card > img {
         object-fit: contain;
         width: 100%;
         height: auto;
         border-top-left-radius: var(--card-border-radius);
         border-top-right-radius: var(--card-border-radius);
+      }
+      .card > img:last-of-type {
+        display: none;
       }
       .card-body {
         padding: 1.25rem;
@@ -104,6 +108,10 @@
         font-size: 0.85rem;
         font-weight: 700;
       }
+      .card-body .price button:hover {
+        background-color: hsl(159, 38%, 24%);
+        cursor: pointer;
+      }
       .card-body .price button img {
         width: 6%;
         height: auto;
@@ -124,12 +132,52 @@
       .text-muted {
         color: var(--neutral-grayish-blue);
       }
+      @media (min-width: 1440px) {
+        body {
+          padding-right: 8rem;
+          padding-left: 8rem;
+          justify-content: center;
+          gap: 8rem;
+        }
+        .card {
+          display: flex;
+          max-width: 50%;
+          margin: 0 auto;
+        }
+        .card-body {
+          justify-content: space-evenly;
+        }
+        .card > img,
+        .card-body {
+          width: 50%;
+        }
+        .card > img {
+          border-bottom-left-radius: var(--card-border-radius);
+          border-top-right-radius: 0;
+          height: 100%;
+          object-fit: cover;
+        }
+        .card > img:first-of-type {
+          display: none;
+        }
+        .card > img:last-of-type {
+          display: inline-block;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="card">
       <img
+        loading="lazy"
         src="/images/image-product-mobile.jpg"
+        alt="image of perfume"
+        width="600"
+        height="900"
+      />
+      <img
+        loading="lazy"
+        src="/images/image-product-desktop.jpg"
         alt="image of perfume"
         width="600"
         height="900"
