@@ -70,14 +70,14 @@
       .card-body .price {
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 1rem;
       }
       .card-body .description small {
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.3rem;
         text-transform: uppercase;
       }
       .card-body .description .copy {
-        line-height: 1.4rem;
+        line-height: 1.5rem;
       }
       .card-body .price div {
         display: flex;
@@ -86,9 +86,27 @@
       }
       .card-body .price div span:first-of-type {
         font-size: 2rem;
+        color: var(--primary-dark-cyan);
       }
       .card-body .price div span:last-of-type {
         text-decoration: line-through;
+      }
+      .card-body .price button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        color: var(--neutral-white);
+        background-color: var(--primary-dark-cyan);
+        padding: 1rem;
+        border: none;
+        border-radius: var(--card-border-radius);
+        font-size: 0.85rem;
+        font-weight: 700;
+      }
+      .card-body .price button img {
+        width: 6%;
+        height: auto;
       }
       .attribution {
         font-size: 11px;
@@ -125,12 +143,20 @@
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
         </div>
-        <div class="price font-montserrat">
+        <div class="price">
           <div>
             <span class="font-fraunces">$149.99</span>
-            <span class="text-muted">$169.99</span>
+            <span class="text-muted font-montserrat">$169.99</span>
           </div>
-          <button>Add to Cart</button>
+          <button class="font-montserrat">
+            <img
+              src="/images/icon-cart.svg"
+              width="15"
+              height="16"
+              alt="image of shopping cart"
+            />
+            <span>Add to Cart</span>
+          </button>
         </div>
       </div>
     </div>
