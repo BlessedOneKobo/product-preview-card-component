@@ -132,20 +132,38 @@
       .text-muted {
         color: var(--neutral-grayish-blue);
       }
+
+      @media (min-width: 525px) {
+        body {
+          padding: 4rem;
+        }
+        .card {
+          max-width: 85%;
+          margin: 0 auto;
+        }
+      }
+      @media (min-width: 768px) {
+        .card {
+          max-width: 50%;
+        }
+      }
+      @media (min-width: 1024px) {
+        .card {
+          max-width: 40%;
+        }
+      }
       @media (min-width: 1440px) {
         body {
-          padding-right: 8rem;
-          padding-left: 8rem;
           justify-content: center;
           gap: 8rem;
         }
         .card {
           display: flex;
           max-width: 50%;
-          margin: 0 auto;
         }
         .card-body {
-          justify-content: space-evenly;
+          justify-content: space-between;
+          padding: 2.25rem;
         }
         .card > img,
         .card-body {
